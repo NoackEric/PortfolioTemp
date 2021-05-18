@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+@font-face{
+    src: url("../font/Athene.otf");
+    font-family :athene;
+}
+.sticky{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    height: 5vh;
+}
+
+.sticky a{
+    margin: 0 2em;
+}
+/* Header */
+header{
+    width: 100%;
+    height: 50em;
+}
+header h1{
+    text-align: center;
+}
+header figure{
+    width: 21em;
+    margin: 0 auto;
+}
+/* release */
+.release{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.release>img{
+    width: 5%;
+    float: right;
+}
+.release article{
+    display:flex;
+}
+.containerRelease{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+    .release>img{
+        width: 25%;
+        float: right;
+    }
+    }
