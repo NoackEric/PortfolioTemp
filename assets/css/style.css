@@ -1,59 +1,377 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} 
-@font-face{
-    src: url("../font/Athene.otf");
-    font-family :athene;
-}
-.sticky{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid;
-    position: sticky;
-    top: 0;
-    height: 5vh;
-}
 
-.sticky a{
-    margin: 0 2em;
+@font-face {
+    font-family: "athene";
+    src: url(../font/Athene.otf);
+  }
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
-/* Header */
+/* HEADER */
 header{
+    padding:0 10%;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 50em;
+    border-bottom: 1px solid #002a5a; 
 }
-header h1{
+header h2{
+    display: inline-block;
+    font-weight: 300;  
+    color: #002a5a;  
+    font-size: 16px;
+}
+header h2:nth-child(2){
+    width:75%;
+    text-align: right;
+}
+/* HERO SECTION */
+#hero{
+    background: #efe8d7;
+    padding-top: 100px;
+    color: #002a5a; 
+    padding-bottom: 100px;
+
+}
+#hero h1{
+    font-family: "athene";
+    font-size: 10em;
+    font-weight: 300;
+    margin: 0;
     text-align: center;
 }
-header figure{
-    width: 21em;
+#hero h1>span{
+    height: 3px;
+    width: 200px;
+    background: #002a5a;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+#hero div{
+    width: 80%;
     margin: 0 auto;
+    height: 0.8px;
+    background: #002a5a;
 }
-/* release */
-.release{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+#hero article{
+    width: 400px;
+    text-align: center;
+    margin: 50px auto;
 }
-.release>img{
-    width: 5%;
-    float: right;
+#hero article img{
+    width: 100%;
 }
-.release article{
-    display:flex;
+#hero article h2{
+    font-family: "athene";
+    text-align: left;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 30px;
 }
-.containerRelease{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+#hero article h2 span{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+/* RELEASE SECTION */
+#release{
+    background: #F4C4C4;
+    color: #282b29;
+    
+    font-family: 'Open Sans', sans-serif;
+    padding: 100px 0;
+    font-weight: 300;
+}
+#release h5,#contact h5{
+    font-size: 14px;
+    margin: 0;
+    padding-left: 8%;
+    margin-bottom: 50px;
+}
+#release h1,#contact h1{
+    font-family: "athene";
+    font-size: 10em;
+    margin: 0;
+    font-weight: 300;
+    line-height: 200px;
+}
+#release p{
+    width: 530px;
+    margin-left:auto ;
+    margin-right: 100px;
+    line-height: 36px;
+    font-size: 18px;
 }
 
+/*  TABLE SCTION */
+#release table{
+    width: 600px;
+    margin: 100px 100px 100px auto;
+}
+
+th,td,tr{
+    border-bottom: 1px solid #282b29;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+}
+th{
+    text-align: right
+}
+td{
+    padding: 30px 0;
+}
+table tr td{
+    font-size: 20px;
+    font-weight: 400;
+}
+table tr td:last-child{
+    font-size: 12px;
+    text-align: right;
+    width: 100px;
+}
+table tr td:first-child{
+    font-size: 10px;
+}
+table tr td:last-child{
+    font-size: 12px;
+    text-align: right;
+    width: 100px;
+}
+#release div{
+    margin-right: 100px;
+ text-align: right;
+}
+#release img{
+    width: 120px;
+    height: 120px;
+}
+/* WORK SECTIONS */
+#works{
+    background:#DEB873;
+    color: #7d2222;
+    font-family: 'Open Sans', sans-serif;
+    padding: 100px 0;
+    font-weight: 300;
+}
+#works h5{
+    font-size: 14px;
+    margin: 0;
+    padding-right: 8%;
+    margin-bottom: 50px;
+    text-align: right;
+
+}
+#works h1{
+    
+    font-family: "athene";
+    font-size: 10em;
+    margin: 0;
+    font-weight: 300;
+    line-height: 200px;
+    text-align: right;
+}
+#works p{
+    width: 530px;
+    margin-left:100px ;
+    line-height: 36px;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 200px;
+}
+#works figure{
+    margin: 0;
+    padding: 0;
+    margin-right: 120px;
+    height: 60vh;
+    margin-bottom: 250px;
+}
+#works figure:nth-of-type(1){
+    background: url(../img/bg-marconatto-1.jpg) right/contain no-repeat;
+}
+#works figure:nth-of-type(2){
+    background: url(../img/kathe_cover-1.jpg) left/contain no-repeat;
+    margin-left: 120px;
+
+}
+#works figure:nth-of-type(3){
+    background: url(../img/bg-nicole-1.jpg) right/contain no-repeat;
+}
+#works figure:nth-of-type(4){
+    background: url(../img/boa_cover-1.jpg) left/contain no-repeat;
+    margin-left: 120px;
+    margin-bottom: 150px;
+}
+
+#works h2{
+    font-family: "athene";
+    font-size: 4em;
+    margin: 0;
+    font-weight: 300;
+    margin-left: 100px;
+    text-align: left;
+}
+#works figure:nth-of-type(2) h2,#works figure:nth-of-type(4) h2{
+    text-align: right;
+}
+
+/*  FOOTER CONTACT */
+#contact{
+    background: #D2D2D2;
+    color: #1d8883;
+    padding-top: 100px;
+    font-weight: 300;
+}
+#contact p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 42px;
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+#contact ul{
+    margin-right: 100px;
+    text-align: right;
+    margin-bottom: 0;
+    list-style: none;
+    padding-bottom: 50px;
+}
+#contact li{
+    margin-bottom: 10px;
+}
+#contact a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #1d8883;
+}
+#contact a:hover{
+    border-bottom: 1px solid #1d8883;
+}
 @media (max-width: 480px) {
-    .release>img{
-        width: 25%;
-        float: right;
+    header {
+        padding: 0 10%;
+        font-family: 'Open Sans', sans-serif;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid #002a5a;
     }
+    
+    header h2:nth-child(2) {
+        text-align: right;
     }
+    #hero h1{
+        font-size: 3.5em;
+    }
+    #hero h1>span{
+        display:none;
+    }
+    #hero article {
+        width: 375px;
+        text-align: center;
+        margin: 50px auto;
+    }
+    #hero article img {
+        width: 95%;
+        margin: 0 auto;
+    }
+    #hero article h2 {
+        font-family: athene;
+        text-align: center;
+        font-weight: 300;
+        margin: 30px 0px 0px;
+    }
+    /* release */
+    #release h1, #contact h1 {
+        font-family: "athene";
+        font-size: 6em;
+        margin: 0;
+        font-weight: 200;
+        line-height: 125px;
+    }
+    #release p {
+        width: 340px; 
+        margin-left: auto;
+        margin-right: 100px;
+        line-height: 36px;
+        font-size: 18px;
+    }
+    #release div {
+        margin-right: 20px;
+        text-align: right;
+    }
+    /*  TABLE */
+    #release table {
+        width: 375px;
+        margin: 100px 100px 100px auto;
+    }
+    td {
+        padding: 30px 10px;
+    }
+    /* WORKS */
+    #works h1 {
+        font-family: "athene";
+        font-size: 7em;
+        margin: 0;
+        font-weight: 200;
+        line-height: 125px;
+        text-align: right;
+    }
+    #works p {
+        width: 340px;
+        margin: 0 auto; 
+        line-height: 36px;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 200px;
+    }
+    #works figure {
+        margin: 0;
+        padding: 0;
+        margin-right: 120px;
+        height: 50vh;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    #works h2 {
+        font-family: "athene";
+        font-size: 2.4em;
+        margin-bottom: 0px;
+        font-weight: 300;
+        margin-left: 0;
+        text-align: left;
+   
+    }
+    #works figure:nth-of-type(2) {
+        background: url(../img/kathe_cover-1.jpg) left/contain no-repeat;
+        margin-left: 0px;
+    }
+    #works figure:nth-of-type(2) h2, #works figure:nth-of-type(4) h2 {
+        text-align: left;
+    }
+    #works figure:nth-of-type(4) {
+        background: url(../img/boa_cover-1.jpg) left/contain no-repeat;
+        margin-left: 0px;
+        margin-bottom: 100px;
+    }
+    /*  footer */
+
+    #contact p {
+        width: 360px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 42px;
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
+    #contact ul {
+        margin: 0 ;
+        text-align: center;
+        margin-bottom: 0;
+        list-style: none;
+        padding-bottom: 50px;
+    }
+}
+ 
